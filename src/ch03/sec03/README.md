@@ -44,3 +44,26 @@ ch03 객체 지향 핵심
  
  
 - 예제 코드 : Customer2.java, VIPCustomer2.java, CustomerTest2.java
+ 
+ 
+## 형 변환(업 캐스팅)
+
+> 상위 클래스로 변수 선언, 하위 클래스의 생성자로 인스턴스 생성
+>
+> `Customer customerLee = new VIPCustomer();`
+ 
+- 상위 클래스 타입의 변수에 하위 클래스 변수가 대입
+    - 기본적으로 하위 클래스 타입은 상위 클래스 타입으로 묵시적 형 변환이 일어난다.
+    - 왜냐하면, 하위 클래스는 상위 클래스의 타입을 내포하고 있기 때문이다.
+ 
+```
+VIPCustomer vCustomer = new VIPCustomer(); 
+addCustomer(vCustomer);
+int addCustomer(Customer customer) {...}
+```
+ 
+- 업캐스팅 된 하위 객체는 상위 객체의 속성(멤버 변수, 메소드)만을 사용할 수 있다.
+    - 업캐스팅으로 객체 생성 시, 힙 메모리 상에는 상위 클래스 기반의 하위 객체가 전부 생성되지만, 접근에 한해서만 상위 객체의 속성만을 사용할 수 있음을 의미한다.
+ 
+- 상속 관계에서 모든 하위 클래스는 상위 클래스로 형 변환(업 캐스팅) 된다.
+    - 단, 역은 성립하지 않는다!!

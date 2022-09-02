@@ -17,6 +17,9 @@ public class CustomerTest2 {
 		customerKang.bonusPoint = 25000;
 		System.out.println(customerKang.showCustomerInfo());
 		
+		/* 업 캐스팅 */
+		Customer2 vc = new VIPCustomer2(00000, "no-name");
+		
 	}
 
 }
