@@ -2,8 +2,8 @@
 
 ## Last Updates
 
-- 22. 9. 2. ch03 시작 - 각 섹션마다 README.md 작성으로 나만의 노트 작성
-- 22. 9. 2. ch01(중간) - ch02(완료) 상태에서 Remote Repository 생성
+- 220902 ch03 시작 - 각 섹션마다 README.md 작성으로 나만의 노트 작성
+- 220902 ch01(중간) - ch02(완료) 상태에서 Remote Repository 생성
 
 ## To-do lists
 
