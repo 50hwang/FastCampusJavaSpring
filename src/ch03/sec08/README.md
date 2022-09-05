@@ -20,3 +20,7 @@ VIPCustomer vCustomer = (VIPCustomer)vc;	//명시적 But 클래스 형 변환 런타임 예외
 ## instanceof를 이용한 인스턴스의 타입 체크
 
     객체의 클래스 타입 체크(맞으면 true, 틀리면 false)를 통하여, 좀 더 안전한 다운캐스팅을 구현할 수 있다.
+    
+
+> 이전 sec06에서 사용한 동물 클래스(AnimalTest)에서 참고
+
