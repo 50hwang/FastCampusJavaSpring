@@ -60,6 +60,8 @@ public class AnimalTest {
 		Animal tAnimal = new Tiger();
 		Animal eAnimal = new Eagle();
 		
+		AnimalTest test = new AnimalTest();	//다운 캐스팅 테스트 메소드 실행을 위한 메인 객체 생성
+		
 		/* ArrayList를 통한 각 동물들의 동작 테스트 */
 		ArrayList<Animal> animalList = new ArrayList<>();
 		animalList.add(hAnimal);
@@ -70,6 +72,31 @@ public class AnimalTest {
 			animal.move();
 		}
 		
+		System.out.println("\n==============================\n");
+		
+		/* 다운 캐스팅 테스트 */
+		test.testDownCasting(animalList);
+		
+	}
+	
+	/* 다운 캐스팅 메소드 */
+	public void testDownCasting(ArrayList<Animal> list) {
+		for(int i = 0; i < list.size(); i++) {
+			Animal animal = list.get(i);
+			
+			if(animal instanceof Human) {
+				Human human = (Human)animal;
+				human.read();
+			} else if (animal instanceof Tiger) {
+				Tiger tiger = (Tiger)animal;
+				tiger.hunt();
+			} else if (animal instanceof Eagle) {
+				Eagle eagle = (Eagle)animal;
+				eagle.build();
+			} else {
+				System.out.println("unsupported type");
+			}
+		}
 	}
 	
 }
