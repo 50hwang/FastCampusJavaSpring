@@ -14,8 +14,6 @@ class VIPCustomer2 extends Customer2 {
 		bonusRatio = 0.05;
 		customerGrade = "VIP";
 		discountRatio = 0.1;
-
-		System.out.println("VIPCustomer2() 호출됨");
 	}
 
 	public VIPCustomer2(int customerID, String customerName) {	//사용자 정의 생성자
@@ -25,8 +23,6 @@ class VIPCustomer2 extends Customer2 {
 		bonusRatio = 0.05;
 		customerGrade = "VIP";
 		discountRatio = 0.1;
-
-		System.out.println("VIPCustomer2(int customerID, String customerName) 호출됨");
 	}
 
 	/* Methods */
@@ -38,4 +34,13 @@ class VIPCustomer2 extends Customer2 {
 		this.agentID = agentID;
 	}
 
+	@Override	//애노테이션 : 컴파일러에게 특별한 정보(재정의된 메서드) 제공 -> 컴파일 오류를 줄여준다. 
+	public int calcPrice(int price) {
+		bonusPoint += price * bonusRatio;
+		price -= (int)(price * discountRatio);
+		return price;
+	}
+
+	
+	
 }

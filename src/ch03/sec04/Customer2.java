@@ -18,7 +18,6 @@ class Customer2 {
 		customerGrade = "SILVER";
 		bonusRatio = 0.01;
 		
-		System.out.println("Customer2(int customerID, String customerNam) »£√‚µ ");
 	}
 
 	/* Methods */
