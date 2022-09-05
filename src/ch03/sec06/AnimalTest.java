@@ -1,4 +1,5 @@
 package ch03.sec06;
+import java.util.ArrayList;
 
 class Animal {
 	
@@ -59,17 +60,16 @@ public class AnimalTest {
 		Animal tAnimal = new Tiger();
 		Animal eAnimal = new Eagle();
 		
-		/* 각 동물들의 동작 테스트 */
-		AnimalTest test = new AnimalTest();	//moveAnimal() 메소드 실행을 위한 테스트 객체 생성
-		test.moveAnimal(hAnimal);
-		test.moveAnimal(tAnimal);
-		test.moveAnimal(eAnimal);
+		/* ArrayList를 통한 각 동물들의 동작 테스트 */
+		ArrayList<Animal> animalList = new ArrayList<>();
+		animalList.add(hAnimal);
+		animalList.add(tAnimal);
+		animalList.add(eAnimal);
 		
-	}
-	
-	/* 각 동물의 객체를 받아 해당 객체의 move 메소드 호출하는 테스트 메소드 */
-	public void moveAnimal(Animal animal) {
-		animal.move();
+		for(Animal animal : animalList) {
+			animal.move();
+		}
+		
 	}
 	
 }

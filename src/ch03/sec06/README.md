@@ -85,4 +85,16 @@ public class AnimalTest {
 - 단, 하위 객체들의 업 캐스팅으로 인해 각 하위 클래스들이 상위 클래스로부터 타이트한 영향을 받는다.
      - 각 하위 클래스마다의 고유한 로직을 호출할 수 없다. -> 다시 다운 캐스팅 필요
      - 예제 코드에서, 각 동물 하위 클래스의 고유 메소드(`read()`, `hunt()`, `build()`)는 접근 불가로 구현할 수 없다.
-
+ 
+    ArrayList를 통하여 각 동물 객체들을 추가하여, 추가된 동물들의 move()를 일괄 호출하는 코드를 작성해보자.
+ 
+```
+		ArrayList<Animal> animalList = new ArrayList<>();
+		animalList.add(hAnimal);
+		animalList.add(tAnimal);
+		animalList.add(eAnimal);
+		
+		for(Animal animal : animalList) {
+			animal.move();
+		}
+```
