@@ -27,7 +27,7 @@ ch03 객체 지향 핵심
     - ex) `public static final double PI = 3.14;`
     - 여러 자바 파일에서 사용할 수 있도록 상수값을 정의할 때, `public static final` 키워드를 사용한다.
     - 따라서, 객체를 일일이 생성하지 않고, 클래스로부터 직접 호출할 수 있다.
-
+ 
     > 예제 코드 : 상수 클래스 `Definitions`, 상수 테스트 코드 `DefinitionsTest`
 - `final` 메소드 : 하위 클래스에서 재정의할 수 없는 메소드
 - `final` 클래스 : 하위 클래스로 상속할 수 없는 클래스
